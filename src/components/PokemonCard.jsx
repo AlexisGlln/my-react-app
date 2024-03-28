@@ -1,9 +1,29 @@
-function PokemonCard() {
-    return <figure>
-        <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"/>
-        <figcaption> Bulbasaur </figcaption>
+function PokemonCard(props){
 
+  let result;
+
+  props.imgSrc ? result = `
+    <figure class="card">
+      <img class="card-img" src=${props.imgSrc} alt={${props.alt}}/>
+      <figcaption>
+        ${props.name}
+      </figcaption>
     </figure>
+   `: result = `
+    <figure class="card">
+      <p>???<p/>
+      <figcaption>
+        ${props.name}
+      </figcaption>
+    </figure>
+`
+  
+
+  return (
+    <div dangerouslySetInnerHTML={{ __html: result }} />
+  );
 }
+
+
 
 export default PokemonCard;
