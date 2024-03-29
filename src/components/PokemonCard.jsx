@@ -1,4 +1,4 @@
-function PokemonCard(props){
+function PokemonCard(props) {
 
   let result;
 
@@ -17,7 +17,7 @@ function PokemonCard(props){
       </figcaption>
     </figure>
 `
-  
+
 
   return (
     <div dangerouslySetInnerHTML={{ __html: result }} />
