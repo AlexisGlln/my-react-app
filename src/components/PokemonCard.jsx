@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
 
-function PokemonCard(props) {
-
+function PokemonCard(props,{pokemonIndex}) {
+  
+  console.log('%c⧭', 'color: #917399', pokemonIndex);
+  console.log('%c⧭', 'color: #00bf00', props.pokemonIndex);
+  
   let result;
 
   props.imgSrc ? result = `

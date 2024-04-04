@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -42,10 +43,11 @@
 }
 
 /* .card et .card-img forme le css de la carte */
+
 .card {
   width: 200px;
   padding: 1rem;
-  background-color: lightgreen;
+  background-color: lightgreen; 
   border-radius: 5px;
   box-shadow: 0px 0px 5px gray;
   color: white;
