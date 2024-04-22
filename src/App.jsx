@@ -1,8 +1,7 @@
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
 import "./App.css";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 
 function App() {
@@ -111,6 +110,9 @@ function App() {
         },
       ];
 
+      useEffect(() => {
+        alert("hello pokemon trainer :)");
+      }, []);
 
       return (
         <div>
@@ -122,3 +124,4 @@ function App() {
     }
 
     export default App;
+    

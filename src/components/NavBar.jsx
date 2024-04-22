@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function NavBar ({ pokemonIndex, setPokemonIndex, pokemonList }) {
-    console.log('%c⧭', 'color: #ff0000', pokemonList[0].name);
-    
     return (
-      pokemonList.map((pokemonIndex, el) => (
-        <button key={el} onClick={() => {
-        setPokemonIndex(el)
-        }}> {pokemonIndex.name} </button>
-
+      pokemonList.map((pokemon, index) => (
+        <button key={index} onClick={() => {
+          if (pokemon.name === "pikachu") {
+            alert("pika pikachu !!!");
+          } else {
+            setPokemonIndex(index);
+          }
+        }}> {pokemon.name} </button>
       ))
     );
+}
 
-
+export default NavBar;
 
 
 
@@ -40,6 +42,3 @@ function NavBar ({ pokemonIndex, setPokemonIndex, pokemonList }) {
     //   <button onClick={Next}>Suivant</button>
     // </div>
     // )
-}
-
-export default NavBar;
